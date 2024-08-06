@@ -18,10 +18,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#include "RawData.hpp"
-#include "Genomica.hpp"
-#include "LemonTree.hpp"
-#include "ProgramOptions.hpp"
+#include "parsimone/RawData.hpp"
+#include "parsimone/Genomica.hpp"
+#include "parsimone/LemonTree.hpp"
+#include "parsimone/ProgramOptions.hpp"
 
 #include "common/DataReader.hpp"
 #include "common/UintSet.hpp"
@@ -123,7 +123,7 @@ learnNetwork(
         throw po::error("Output directory doesn't exist and could not be created");
       }
     }
-    fs::copy_file(fs::path(options.configFile()), options.outputDir() + "/configs.json", fs::copy_option::overwrite_if_exists);
+    fs::copy_file(fs::path(options.configFile()), options.outputDir() + "/configs.json", fs::copy_options::overwrite_existing);
   }
   comm.barrier();
   TIMER_DECLARE(tNetwork);

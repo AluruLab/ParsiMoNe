@@ -1,0 +1,15 @@
+-I./ext/
+-I./test/
+-I./include/
+-I./ext/mxx/include
+-I./ext/mxx/ext/
+-I./ext/mxx/ext/common/
+-I./ext/trng4/
+-I/opt/armadillo/include/
+-I/usr/include
+-I/usr/local/include
+-I/usr/include/hdf5/mpich
+-I/usr/include/mpich
+-I./build/ext/trng4/
+-I./build/_deps/googletest-src/googletest/include/
+-DLOGGING

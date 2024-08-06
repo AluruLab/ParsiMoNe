@@ -1,9 +1,12 @@
 [submodule "utils"]
-	path = utils
-	url = git@github.com:asrivast28/cpp-utils.git
+	path = ext/utils
+	url = https://github.com/asrivast28/cpp-utils.git
 [submodule "mxx"]
-	path = mxx
-	url = git@github.com:patflick/mxx.git
+	path = ext/mxx
+	url = https://github.com/patflick/mxx.git
 [submodule "common"]
-	path = common
-	url = git@github.com:asrivast28/bn-utils.git
+	path = ext/common
+	url = https://github.com/AluruLab/bn-utils.git
+[submodule "ext/trng4"]
+	path = ext/trng4
+	url = https://github.com/rabauke/trng4.git

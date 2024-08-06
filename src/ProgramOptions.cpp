@@ -17,7 +17,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#include "ProgramOptions.hpp"
+#include "parsimone/ProgramOptions.hpp"
 
 #include <boost/filesystem.hpp>
 
