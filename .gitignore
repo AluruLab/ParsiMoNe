@@ -1,5 +1,6 @@
 /builds/
 /build/
+/build.r/
 /datasets/
 /parsimone*
 /.sconsign.dblite

@@ -34,6 +34,10 @@ ProgramOptions::ProgramOptions(
     m_algoName(),
     m_outputDir(),
     m_configFile(),
+    m_h5Path(),
+    m_h5MatrixDataPath(),
+    m_h5VarsDataPath(),
+    m_h5ObsDataPath(),
     m_numVars(),
     m_numObs(),
     m_separator(),
@@ -59,6 +63,10 @@ ProgramOptions::ProgramOptions(
     ("indices,i", po::bool_switch(&m_obsIndices)->default_value(false), "The file contains observation indices")
     ("algorithm,a", po::value<std::string>(&m_algoName)->default_value("lemontree"), "Name of the algorithm to be used")
     ("outdir,o", po::value<std::string>(&m_outputDir)->default_value("."), "Name of the directory to which the output files should be written")
+    ("h5root", po::value<std::string>(&m_h5Path)->default_value("/"), "HDF5 Root Path for all data")
+    ("h5matrix", po::value<std::string>(&m_h5MatrixDataPath)->default_value("matrix"), "HDF5 path to matrix data")
+    ("h5obs", po::value<std::string>(&m_h5ObsDataPath)->default_value("col_attrs/CellID"), "HDF5 path to observations names")
+    ("h5var", po::value<std::string>(&m_h5VarsDataPath)->default_value("row_attrs/Gene"), "HDF5 path to variable names")
     ;
 
   po::options_description advanced("Advanced options");
@@ -227,6 +235,34 @@ ProgramOptions::logFile(
 ) const
 {
   return m_logFile;
+}
+
+const std::string&
+ProgramOptions::h5root(
+) const
+{
+  return m_h5Path;
+}
+
+const std::string&
+ProgramOptions::h5matrixPath(
+) const
+{
+  return m_h5MatrixDataPath;
+}
+
+const std::string&
+ProgramOptions::h5obsPath(
+) const
+{
+  return m_h5VarsDataPath;
+}
+
+const std::string&
+ProgramOptions::h5varPath(
+) const
+{
+  return m_h5VarsDataPath;
 }
 
 ProgramOptions::~ProgramOptions(

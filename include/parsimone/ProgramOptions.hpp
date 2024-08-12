@@ -87,6 +87,18 @@ public:
   const std::string&
   logFile() const;
 
+  const std::string&
+  h5root() const;
+
+  const std::string&
+  h5matrixPath() const;
+
+  const std::string&
+  h5obsPath() const;
+
+  const std::string&
+  h5varPath() const;
+
   ~ProgramOptions();
 
 private:
@@ -97,6 +109,10 @@ private:
   std::string m_algoName;
   std::string m_outputDir;
   std::string m_configFile;
+  std::string m_h5Path;
+  std::string m_h5MatrixDataPath;
+  std::string m_h5VarsDataPath;
+  std::string m_h5ObsDataPath;
   uint32_t m_numVars;
   uint32_t m_numObs;
   char m_separator;
